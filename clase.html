@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firt HTML DOM</title>
+</head>
+
+<body id="body">
+    
+    <p id="demo"> Hola Mundo </p>
+    <label  id="label_txt"> Texto Label </label>
+    <br>
+    <img src="0.jpeg" id="imagen"> 
+    <br>    
+    <input type="button" value="Reset" onclick="reset()" />
+    <input type="button" value="Cambiar Imagen" onclick="cambiaImagen()" />
+
+    <div id="div1" >
+        <p  id="p1" > Este es el parrafo 1 </p>
+        <p  id="p2" > Este es el parrafo 2 </p>
+    </div>
+</body>
+
+<script> 
+     function reset() {
+        document.getElementById("demo").innerHTML = "Hola Mundo";
+     }
+
+     function cambiaImagen(){
+        document.getElementById("demo").innerHTML = "<h1>Hola Mundo JS </h1>"
+        document.getElementById("p1").innerHTML = "Este es un nuevo parrafo"
+
+        const p3 = document.createElement("p");
+        const nodo = document.createTextNode("Este es el parrafo 3");
+
+        p3.appendChild( nodo );
+        p3.setAttribute("id", "p3");
+        const div_1 =document.getElementById("div1");
+        div_1.appendChild( p3 );
+        var image_element = document.getElementById("imagen");
+        image_element.setAttribute("src", "1.jpeg");
+  }
+</script>
+
+</html>

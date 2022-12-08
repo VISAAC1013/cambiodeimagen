@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <p id="demo_1" > Texto parrafo 1</p>
+
+    <p id="demo_2" >  Texto parrafo 2</p>
+
+    <label id="label_1"> Texto label</label>
+    
+    <label id="label_2"> Descripcion </label>
+
+    <br>
+    <br>
+
+    <input type="text" id="texto_1" />
+    <label id="label_3"> Decripcion texto </label>
+
+</body>
+
+<script>
+
+document.getElementById("demo_1").innerHTML =  "Hola Mundo";
+
+var elemento = document.getElementById("demo_2");
+
+elemento.innerHTML = elemento; // html dom object convierte a string 
+
+var elemento_label = document.getElementById("label_2");
+document.getElementById("label_2").innerHTML = elemento_label; // obj trans string
+
+
+var elemento_texto =  document.getElementById("texto_1");
+
+document.getElementById("label_3").innerHTML = elemento_texto;
+
+
+elemento_texto.value ="Gerardo Hernandez";
+  
+</script>
+
+
+</html>
